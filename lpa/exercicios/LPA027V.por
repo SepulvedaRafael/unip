@@ -7,10 +7,30 @@ e calcule e armazene o resultado da soma destes em outro vetor C.
 
 programa
 {
-	
+	const inteiro lim = 5
 	funcao inicio()
 	{
-		escreva("Olá Mundo")
+		// Declaração das variáveis/vetores
+		inteiro a[lim], b[lim], c[lim], i
+
+		// Entrada de dados
+		para (i = 0; i < lim; i++)
+		{
+			escreva("Digite o valor do vetor A[", i, "]: ")
+			leia(a[i])
+			escreva("Digite o valor do vetor B[", i, "]: ")
+			leia(b[i])
+		}
+
+		// Processamento de dados
+		para (i = 0; i < lim; i++)
+			c[i] = a[i] + b[i]
+
+		// Saída de dados
+		escreva("\n")
+		para (i = 0; i < lim; i++)
+			escreva("C[", i, "] = ", c[i], "\n")
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +38,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 171; 
+ * @POSICAO-CURSOR = 299; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
