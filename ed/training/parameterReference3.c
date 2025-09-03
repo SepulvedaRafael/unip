@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-void alterarValor(int *valor)
+void porReferencia(int *x)
 {
-    *valor = 20;
+    *x = *x + 10;
 }
 
 int main()
 {
-    int x = 10;
-    printf("Antes: %i\n", x);
-    alterarValor(&x);
-    printf("Depois: %i\n", x);
+    int b = 10;
+    porReferencia(&b);
+    printf("Endereço: %p\n", &b);
+    printf("b: %d\n", b);
     return 0;
 }
